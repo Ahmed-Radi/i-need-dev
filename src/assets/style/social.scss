@@ -1,0 +1,68 @@
+@import './mixin';
+
+.card-container {
+    @include flex;
+    height: calc(100vh - (76px + 68px + 10px));
+    .row div {
+        &:nth-child(1) {
+            & :hover {
+                background-color: #4267B2;
+            }
+        }
+        &:nth-child(2) {
+            & :hover {
+                background-color: #0072b1;
+            }
+        }
+        &:nth-child(3) {
+            & :hover {
+                background-color: #00acee;
+            }
+        }
+    }
+    .card {
+        @include flex;
+        padding: 10px;
+        background-color: #fff;
+        min-height: 200px;
+        &__icon {
+            &.facebook {
+                svg {
+                    @include SVG(#4267B2);
+                }
+            }
+            &.linkedIn {
+                svg {
+                    @include SVG(#0072b1);
+                }
+            }
+            &.twitter {
+                svg {
+                    @include SVG(#00acee);
+                }
+            }
+        }
+        &:hover {
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+@media (max-width: 991.5px) {
+    .card-container{
+        .card-content {
+            margin: 0 auto;
+        }
+        .card {
+            margin-bottom: 10px;
+        }
+    }
+}
+@media (max-width: 768.5px) {
+    .card-container{
+        .card {
+            min-height: 130px;
+        }
+    }
+}

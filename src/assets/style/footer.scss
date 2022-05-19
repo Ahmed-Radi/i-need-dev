@@ -1,0 +1,15 @@
+footer {
+    padding: 10px;
+    background-color: #07A151;
+    text-align: center;
+    .copy-right {
+        margin: 0;
+    }
+    .author {
+        color: darkblue;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
